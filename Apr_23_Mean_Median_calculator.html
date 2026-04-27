@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Mean and Median</h2>
+<div>
+<input id="ip" type="integer" 
+<button onclick="calculate()">Start Now</button>
+</div> <div id="op></div>
+
+
+<script>
+function calculate() {
+
+    let arr = document.getElementById(;
+      let arr = input.split(",").map(Number);
+    let sum = arr.reduce((a, b) => a + b, 0);
+    let mean = sum / arr.length;
+
+    let sorted = arr.sort((a, b) => a - b);
+    let mid = Math.floor(sorted.length / 2);
+    let median = sorted[mid];
+
+    document.getElementById("output").innerHTML =
+        "Mean: " + mean + "<br>Median: " + median;
+}
+</script>
+
+</body>
+</html>

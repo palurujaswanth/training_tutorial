@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game</title>
+</head>
+
+<body>
+<h2> Random Number Game </h2>
+<input type="text" id="ip">
+<button id="btn" onclick="test()">Test</button>
+<div id="op"></div>
+<div id="chance"></div>
+<script>
+var Total_chances = 5;
+
+function test(){
+    var n = Number(document.getElementById("ip").value);
+    var a = Math.floor(Math.random() * 10) + 1;
+    Total_chances--;
+    if(n == a){
+        document.getElementById("op").innerHTML = "That's Nice! You guessed correctly";
+        document.getElementById("btn").disabled = true;}
+    else if(n > a){
+        document.getElementById("op").innerHTML = "The number is greater";}
+    else{
+        document.getElementById("op").innerHTML = "The number is lesser";}
+
+    document.getElementById("chance").innerHTML = "Remaining Chances: " + Total_chances;
+
+    if(Total_chances == 0){
+        document.getElementById("op").innerHTML = "The chances are over";
+        document.getElementById("btn").disabled = true;}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game</title>
+</head>
+<body>
+<h2> Birthday </h2>
+<input type="date" id="ip">
+<button onclick="Check()">Check</button>
+<div id="op"></div>
+<script>
+var nice =[
+    "You are great",
+    "You are amazing",
+    "You are wonderful",
+    "You are special",
+    "You are awesome"];
+var tease=[
+    "Your friend is great",
+    "Your friend is smarter",
+    "Your friend is more lucky",
+    "Your friend wins today",
+    "Your friend is shining"];
+
+function Check(){
+    var n = document.getElementById("ip").value;
+    var day = new Date(n).getDate();
+    var arr;
+    if(day%2==0){
+        arr = nice;}
+    else{
+        arr = tease;}
+    var randomIndex = Math.floor(Math.random() * arr.length);
+    document.getElementById("op").innerHTML = arr[randomIndex];
+}
+</script>
+</body>
+</html>
+</br>

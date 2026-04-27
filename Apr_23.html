@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>Array Manipulators</title>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+    let alp = ["A","B","C","D"];
+
+    let display = alp.map(item => {
+        return '<li>' + item + '</li>';
+    });
+
+    let render = '<ul>' + display.join('') + '</ul>';
+
+    document.getElementById("output").innerHTML = render;
+</script>
+
+</body>
+</html>
+
+
+<!--<script>
+function testFunction(){
+	var l = document.getElementById("ip").value.split(' ');
+	console.log(l);
+	console.log(l.find(k => k >= 10);
+	document.getElementById("res").innerHTML = l;
+}
+</script>-->

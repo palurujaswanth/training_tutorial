@@ -1,0 +1,91 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* This selects <h1> elements that are DIRECT children of <ul> */
+        ul > h1 
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CHILD SELECTOR EXAMPLE</h1>
+    
+    <ul>
+	<ul>
+        <h1>subjects</h1> <!-- This will be RED because it's a direct child -->
+	</ul>
+        <li>Maths</li>
+        <li><ul><ul><h1>English</h1></ul></ul></li> <!-- This will NOT be red (it's a grandchild) -->
+        <li>Computers</li>
+    </ul>-->
+
+
+<html>
+<head>
+<title>CSS Table Example</title>
+
+<style>
+table{
+border-collapse:collapse;
+width:50%;
+}
+
+th{
+background-color:blue;
+color:yellow;
+border:1px solid black;
+}
+
+td{
+background-color:yellow;
+color:blue;
+border:1px solid black;
+}
+
+input{
+background-color:yellow;
+border:0px solid black;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>CSS Table Example</h1>
+
+<table>
+
+<caption>FIRST TABLE</caption>
+
+<tr>
+<th>SNO</th>
+<th>NAME</th>
+<th>AGE</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td><input type="string"></td>
+<td>25</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><input type="string" style="background-color: yellow;border:0px;"; ></td>
+<td>35</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><input type="string"></td>
+<td>5</td>
+</tr>
+
+</table>
+
+</body>
+</html>

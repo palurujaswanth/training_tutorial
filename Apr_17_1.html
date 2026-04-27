@@ -1,0 +1,194 @@
+<html>
+<head>
+<!--
+<style>
+div{
+ width: 200px;
+ height: 200px;
+ background: red;
+ /* trasition: width 3s; */
+ /* transition-property: width;
+    transition-duration: 3s;*/
+    transition: width 3s, height 3s, transform 3s;
+}
+div:hover{
+width: 1000px;
+transform: rotate(360deg)}
+</style>-->
+
+ <title>div example </title>
+<style type="text/css">
+#header{background: lightblue; height: 20%; border: solid; border-radius:10px; padding:10px}
+#main{background-color: yellow; height: 60%; border: solid; margin-top:10px; border-radius:10px; overflow: auto; padding: 10px;}
+#main1{background-color: yellow; height: 70%; border: solid; margin-top:10px; border-radius:10px; overflow: auto; padding: 10px; width: 30%;}
+#main2{background-color: yellow; height: 70%; border: solid; margin-top:10px; border-radius:10px; overflow: auto; padding: 10px; width: 30%;}
+#footer{background-color: pink; height:15%; border: solid; margin-top:10px; border-radius:10px;}
+</style> 
+
+</head>
+<body>
+
+<!-- <hr color="red" size="5" width="50%" align="center"/> 
+
+
+<p style="background-color:Red"> sample Text </p>
+
+<ul style="list-style-type: none; ">
+  <li style="display:inline;  margin-right:10px;">Hi</li>
+  <li style="display:inline;"> Hello </li>
+</ul>
+
+<style>
+.test{background-color:blue;
+</style> 
+
+<p class="test"> sample</p> -->
+
+<div id="header" align="center"> header division</div>
+<div id="main"> 
+	<div id="aleft">
+<div id="main1" align="left">		
+<table border="1">
+<tr>
+<td>UserName</td>
+<td><input type="text" placeholder="username" name="username" autofocus></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" placeholder="password" name="password"></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="email" placeholder="email" name="email"></td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea name="address" placeholder="address"></textarea></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender" val="male">Male
+<input type="radio" name="gender" val="Female">Female
+</td>
+ <tr>
+        <td>Courses Interested</td>
+        <td>
+            <input type="checkbox" name="course" value="DBMS"> DBMS
+            <input type="checkbox" name="course" value="DSA"> DSA
+            <input type="checkbox" name="course" value="OS"> OS
+            <input type="checkbox" name="course" value="FullStack"> Full Stack
+        </td>
+    </tr>
+ <tr>
+        <td>Branch</td>
+        <td>
+            <select name="branch">
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MECH</option>
+                <option>CSM</option>
+            </select>
+        </td>
+    </tr>
+<tr>
+        <td>Date of Birth</td>
+        <td><input type="date" name="dob"></td>
+    </tr>
+    <tr>
+        <td>Upload Photo</td>
+        <td><input type="file" name="photo"></td>
+    </tr>
+<td>Skills You Have</td>
+        <td>
+            <input type="checkbox" name="Skills" value="JAVA"> DBMS
+            <input type="checkbox" name="Skills" value="DSA"> DSA
+            <input type="checkbox" name="Skills" value="PYTHON"> OS
+            <input type="checkbox" name="Skills" value="FullStack"> Full Stack
+        </td>
+    </tr>
+<tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="submit">
+        </td>
+    </tr>
+</table>
+</div>
+<div id="main2" align="center">
+<table border="1">
+<tr>
+<td>UserName</td>
+<td><input type="text" placeholder="username" name="username" autofocus></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" placeholder="password" name="password"></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="email" placeholder="email" name="email"></td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea name="address" placeholder="address"></textarea></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender" val="male">Male
+<input type="radio" name="gender" val="Female">Female
+</td>
+ <tr>
+        <td>Courses Interested</td>
+        <td>
+            <input type="checkbox" name="course" value="DBMS"> DBMS
+            <input type="checkbox" name="course" value="DSA"> DSA
+            <input type="checkbox" name="course" value="OS"> OS
+            <input type="checkbox" name="course" value="FullStack"> Full Stack
+        </td>
+    </tr>
+ <tr>
+        <td>Branch</td>
+        <td>
+            <select name="branch">
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MECH</option>
+                <option>CSM</option>
+            </select>
+        </td>
+    </tr>
+<tr>
+        <td>Date of Birth</td>
+        <td><input type="date" name="dob"></td>
+    </tr>
+    <tr>
+        <td>Upload Photo</td>
+        <td><input type="file" name="photo"></td>
+    </tr>
+<td>Skills You Have</td>
+        <td>
+            <input type="checkbox" name="Skills" value="JAVA"> DBMS
+            <input type="checkbox" name="Skills" value="DSA"> DSA
+            <input type="checkbox" name="Skills" value="PYTHON"> OS
+            <input type="checkbox" name="Skills" value="FullStack"> Full Stack
+        </td>
+    </tr>
+<tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="submit">
+        </td>
+    </tr>
+</table>
+</div>
+	</div>
+</div>
+<div id="footer" align="center">footer</div>  
+
+<!-- <h1>CSS TRANSITION EXAMPLE</h1>
+<div></div>
+<p>place the cursor at the box</p>-->
+</body>
+</html>

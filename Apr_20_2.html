@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+   <title>Apr_20_Java_Script</title>
+</head>
+<body>
+
+<div>
+<input type="number" id="ip">
+<input type="button" value="Start" onclick="start()">
+</div>
+
+<div id="op"></div> 
+
+<script>
+
+function test(n){
+    if(n === 0 || n === 1)	
+        return 1;
+    return n + test(n - 1);
+}
+
+function start(){
+    let n = parseInt(document.getElementById("ip").value);
+    let res = test(n);
+    document.getElementById("op").innerHTML = res;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Age Difference</h2>
+<button onclick="findAges()">Start Now</button>
+
+<p id="output"></p>
+
+<script>
+function findAges() {
+
+    const input = [
+        { name: "John", age: 13 },
+        { name: "Mark", age: 56 },
+        { name: "Rachel", age: 45 },
+        { name: "Nate", age: 67 },
+        { name: "Jennifer", age: 65 }
+    ];
+
+    let minAge = input[0].age;
+    let maxAge = input[0].age;
+
+    for (let i = 1; i < input.length; i++) {
+        if (input[i].age < minAge) {
+            minAge = input[i].age;
+        }
+        if (input[i].age > maxAge) {
+            maxAge = input[i].age;
+        }
+    }
+
+    let difference = maxAge - minAge;
+
+    document.getElementById("output").innerHTML =
+        "Youngest Age: " + minAge + "<br>" +
+        "Oldest Age: " + maxAge + "<br>" +
+        "Difference: " + difference;
+}
+</script>
+
+</body>
+</html>

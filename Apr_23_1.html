@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game</title>
+</head>
+
+<body>
+
+<input type="text" id="ip">
+<button id="btn" onclick="test()">Test</button>
+<div id="op"></div>
+<div id="chance"></div>
+
+<script>
+
+function age(num){
+    return num >= 10;
+}
+
+function test() {
+
+    let alp = [12, 3, 10, 5];
+
+    let a = alp.filter(age); 
+
+    document.getElementById("op").innerHTML = a;
+
+}
+
+test();
+
+</script>
+</body>
+</html>

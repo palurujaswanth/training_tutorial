@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>Accessing The Elements</title>
+</head>
+<body>
+
+<h2>Accessing Elements</h2>
+
+<div>
+    <input type="text" id="myTitle1" placeholder="My Title">
+    <input type="text" class="item" placeholder="Item 1">
+    <input type="text" class="item" placeholder="Item 2">
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <input type="button" value="Access Elements" onclick="start()">
+</div>
+
+<div id="op" style="margin-top:20px; border:1px solid black; padding:10px;"></div>
+
+<h2>Changing Content</h2>
+
+<div>
+    <input type="button" value="Use innerHTML" onclick="useInnerHTML()">
+    <input type="button" value="Use innerText" onclick="useInnerText()">
+    <input type="button" value="Use textContent" onclick="useTextContent()">
+    <input type="button" value="Use Write" onclick="useWrite()">
+    <input type="button" value="Use Print" onclick="printPage()">
+</div>
+
+<script>
+// Accessing elements
+function start() {
+
+    let title = document.getElementById("myTitle1");
+    console.log("Title:", title.value);
+
+    let items = document.getElementsByClassName("item");
+    console.log("Items:");
+    for (let i = 0; i < items.length; i++) {
+        console.log(items[i].value);
+    }
+
+    let paragraphs = document.getElementsByTagName("p");
+    console.log("Paragraphs:");
+    for (let i = 0; i < paragraphs.length; i++) {
+        console.log(paragraphs[i].innerText);
+    }
+
+    let firstItem = document.querySelector(".item");
+    console.log("First item using querySelector:", firstItem.value);
+
+}
+
+// Changing content
+function useInnerHTML() {
+    document.getElementById("op").innerHTML = "<b>Bold Text using innerHTML</b>";
+}
+
+function useInnerText() {
+    document.getElementById("op").innerText = "<b>Bold Text using innerText</b>";
+}
+
+function useTextContent() {
+    document.getElementById("op").textContent = "<b>Bold Text using textContent</b>";
+}
+function useWrite() {
+    document.write("Hello World !...");
+}
+function printPage(){
+    window.print("Hello World !...");
+}
+</script>
+
+</body>
+</html>

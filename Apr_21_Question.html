@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game</title>
+</head>
+
+<body>
+
+<input type="text" id="ip">
+<button id="btn" onclick="test()">Test</button>
+<div id="op"></div>
+<div id="chance"></div>
+<script>
+function test() {
+const a = document.getElementById("ip").value;
+const b = a.split(" ").sort().join(" ");
+document.getElementById("op").innerHTML = b;
+}
+
+</script>
+</body>
+</html>
+
+
+
+

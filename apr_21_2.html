@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>var vs let</title>
+</head>
+<body>
+<input type="button" value="Test Now" onclick="test()">
+<div id="op"></div>
+<script>
+function test() {
+    console.log(a);
+    var a = 30;
+    {
+        var a = 20;
+    };
+    console.log(a);
+
+    console.log(b);
+    var b=10;
+    
+    {
+        let b= 50;
+	console.log(b);
+    }
+    console.log(b);
+    const fruit=["kiwi","mango","papaya"];
+    console.log(fruit[1]);
+    const t = "ABCD";
+    console.log(t[1]);
+
+var myObj = [{flower:"Rose" , color:"Red"},{flower:"B",color:"C"},{flower:"D",color:"E"}];
+
+var text = "<table border='1'>";
+text += "<thead><tr><th>Flower</th><th>Color</th></tr></thead>";
+text += "<tbody>";
+
+var rows = "";
+
+for(let x in myObj)
+{
+    text += "<tr>";
+    text += "<td>" + myObj[x].flower + "</td>";
+    text += "<td>" + myObj[x].color + "</td>";
+    text += "</tr>";
+}
+
+
+
+text += "</table>"
+
+document.getElementById("op").innerHTML = text;
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Form Capture</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        .output-container {
+            width: 450px;
+            background: #2d2d2d;
+            color: #61dafb;
+            padding: 1rem;
+            border-radius: 8px;
+            height: fit-content;
+            min-height: 300px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-item input {
+            width: auto;
+            margin-right: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="margin-top:0">User Details</h2>
+    <form id="dataForm">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required>
+        </div>
+        <div class="form-group">
+            <label>Branch</label>
+            <input type="text" id="branch" placeholder="e.g. CSE" required>
+        </div>
+        <div class="form-group">
+            <label>Technical Skills</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item"><input type="checkbox" name="skills" value="C"> C</div>
+                <div class="checkbox-item"><input type="checkbox" name="skills" value="C++"> C++</div>
+                <div class="checkbox-item"><input type="checkbox" name="skills" value="Java"> Java</div>
+                <div class="checkbox-item"><input type="checkbox" name="skills" value="Python"> Python</div>
+                <div class="checkbox-item"><input type="checkbox" name="skills" value="DBMS"> DBMS</div>
+                <div class="checkbox-item"><input type="checkbox" name="skills" value="OS"> OS</div>
+            </div>
+        </div>
+        <button type="submit">Submit & Generate JSON</button>
+    </form>
+</div>
+
+<div class="output-container">
+    <h3 style="color: white; margin-top:0">JSON Output</h3>
+    <pre id="jsonDisplay">// Submit the form to see JSON here...</pre>
+</div>
+
+<script>
+    var form = document.getElementById('dataForm');
+    var display = document.getElementById('jsonDisplay');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Collecting checkbox values
+        var selectedSkills = [];
+        var checkboxes = document.querySelectorAll('input[name="skills"]:checked');
+        checkboxes.forEach(function(checkbox) {
+            selectedSkills.push(checkbox.value);
+        });
+
+        // Constructing the object
+        var formData = {
+            name: document.getElementById('name').value,
+            dob: document.getElementById('dob').value,
+            branch: document.getElementById('branch').value,
+            skills: selectedSkills,
+            timestamp: new Date().toISOString()
+        };
+
+        // Displaying as JSON string
+        display.textContent = JSON.stringify(formData, null, 4);
+    });
+</script>
+
+</body>
+</html>

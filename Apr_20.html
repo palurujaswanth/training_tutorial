@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+   <title>
+   Apr_20_Java_Script
+   </title>
+</head>
+<body>
+<div>
+<input type="integer" id="ip">
+
+<input type="button" value="Start" onclick="test()">
+</div>
+<div id="op"> </div> 
+<script>
+function test(){
+let n=document.getElementById("ip").value;
+//let res = "";
+//for(let i=0;i<n.value;i++){
+//res +=  " Hi";
+//}
+
+let ans = n*(n-2)/8
+document.getElementById("op").innerHTML =  ans;
+
+alert(res);
+
+}
+</script>
+
+</body>
+</html>
+

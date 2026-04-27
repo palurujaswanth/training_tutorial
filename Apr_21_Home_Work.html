@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Selection</title>
+</head>
+<body>
+
+<h2>Select a Color</h2>
+
+<select id="color">
+    <option value="">--Select--</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Green">Green</option>
+    <option value="Yellow">Yellow</option>
+    <option value="Pink">Pink</option>
+</select>
+
+<br><br>
+
+<button onclick="openNewPage()">Next</button>
+
+<script>
+function openNewPage() {
+    let color = document.getElementById("color").value;
+
+    if (color === "") {
+        alert("Please select a color");
+        return;
+    }
+
+    // open new page
+    let newPage = window.open("", "_blank");
+
+    // write content into new page
+    newPage.document.write(`
+        <html>
+        <head>
+            <title>Selected Color</title>
+        </head>
+        <body style="text-align:center; font-family:Arial;">
+            <h2>Selected Color</h2>
+            <div style="
+                width:150px;
+                height:150px;
+                margin:20px auto;
+                background:${color};
+                border:2px solid black;">
+            </div>
+            <h1>${color}</h1>
+        </body>
+        </html>
+    `);
+}
+</script>
+
+</body>
+</html>
