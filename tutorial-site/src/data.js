@@ -1,105 +1,180 @@
 export const tutorialData = [
   {
-    "day": 1,
-    "title": "HTML Basics",
-    "tags": [
-      "html"
-    ],
-    "file": "Apr_16.html",
-    "content": "<!doctype html>\r\n<html>\r\n<head>\r\n<title> :: First Page... </title>\r\n\r\n<a href=\"\">Hello World !....</a>\r\n</head>\r\n\r\n<body>\r\n\r\n<p>(a+b)<sup>2</sup> = a<sup>2</sup>+b<sup>2</sup>+2*a*b</p>\r\n\r\n<p>If x<sub>1</sub>+x<sub>2</sub> = 5 & x<sub>1</sub>-x<sub>2</sub> = 1 find x<sub>1</sub> & x<sub>2</sub>\r\n\r\n<p> <marquee scrollamount=50> Sample Text </marqueee> </p>\r\n\r\n<marquee direction=\"right\"> <img src=\"C:\\Users\\jaswa\\Downloads\\GID.gif\"></img> </marqueee>\r\n\r\n</body>\r\n\r\n</html>\r\n\r\n\r\n"
+    day: 1,
+    title: 'HTML Basics',
+    tags: ['html'],
+    content: `
+      <h3>Introduction to HTML</h3>
+      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It defines the structure of your web page and its content.</p>
+      <br/>
+      <h4>Essential Tags:</h4>
+      <ul>
+        <li><strong>&lt;html&gt;</strong>: The root element of an HTML page.</li>
+        <li><strong>&lt;head&gt;</strong>: Contains meta information about the document (like its title).</li>
+        <li><strong>&lt;title&gt;</strong>: Specifies a title for the document.</li>
+        <li><strong>&lt;body&gt;</strong>: Contains the visible page content.</li>
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong>: HTML headings.</li>
+        <li><strong>&lt;p&gt;</strong>: Defines a paragraph.</li>
+        <li><strong>&lt;a&gt;</strong>: Defines a hyperlink.</li>
+        <li><strong>&lt;img&gt;</strong>: Embeds an image.</li>
+        <li><strong>&lt;sup&gt; and &lt;sub&gt;</strong>: Superscript and subscript text.</li>
+      </ul>
+    `
   },
   {
-    "day": 2,
-    "title": "Forms and CSS Transitions",
-    "tags": [
-      "html",
-      "css"
-    ],
-    "file": "Apr_17_1.html",
-    "content": "<html>\r\n<head>\r\n<!--\r\n<style>\r\ndiv{\r\n width: 200px;\r\n height: 200px;\r\n background: red;\r\n /* trasition: width 3s; */\r\n /* transition-property: width;\r\n    transition-duration: 3s;*/\r\n    transition: width 3s, height 3s, transform 3s;\r\n}\r\ndiv:hover{\r\nwidth: 1000px;\r\ntransform: rotate(360deg)}\r\n</style>-->\r\n\r\n <title>div example </title>\r\n<style type=\"text/css\">\r\n#header{background: lightblue; height: 20%; border: solid; border-radius:10px; padding:10px}\r\n#main{background-color: yellow; height: 60%; border: solid; margin-top:10px; border-radius:10px; overflow: auto; padding: 10px;}\r\n#main1{background-color: yellow; height: 70%; border: solid; margin-top:10px; border-radius:10px; overflow: auto; padding: 10px; width: 30%;}\r\n#main2{background-color: yellow; height: 70%; border: solid; margin-top:10px; border-radius:10px; overflow: auto; padding: 10px; width: 30%;}\r\n#footer{background-color: pink; height:15%; border: solid; margin-top:10px; border-radius:10px;}\r\n</style> \r\n\r\n</head>\r\n<body>\r\n\r\n<!-- <hr color=\"red\" size=\"5\" width=\"50%\" align=\"center\"/> \r\n\r\n\r\n<p style=\"background-color:Red\"> sample Text </p>\r\n\r\n<ul style=\"list-style-type: none; \">\r\n  <li style=\"display:inline;  margin-right:10px;\">Hi</li>\r\n  <li style=\"display:inline;\"> Hello </li>\r\n</ul>\r\n\r\n<style>\r\n.test{background-color:blue;\r\n</style> \r\n\r\n<p class=\"test\"> sample</p> -->\r\n\r\n<div id=\"header\" align=\"center\"> header division</div>\r\n<div id=\"main\"> \r\n\t<div id=\"aleft\">\r\n<div id=\"main1\" align=\"left\">\t\t\r\n<table border=\"1\">\r\n<tr>\r\n<td>UserName</td>\r\n<td><input type=\"text\" placeholder=\"username\" name=\"username\" autofocus></td>\r\n</tr>\r\n<tr>\r\n<td>Password</td>\r\n<td><input type=\"password\" placeholder=\"password\" name=\"password\"></td>\r\n</tr>\r\n<tr>\r\n<td>Email</td>\r\n<td><input type=\"email\" placeholder=\"email\" name=\"email\"></td>\r\n</tr>\r\n<tr>\r\n<td>Address</td>\r\n<td><textarea name=\"address\" placeholder=\"address\"></textarea></td>\r\n</tr>\r\n<tr>\r\n<td>Gender</td>\r\n<td>\r\n<input type=\"radio\" name=\"gender\" val=\"male\">Male\r\n<input type=\"radio\" name=\"gender\" val=\"Female\">Female\r\n</td>\r\n <tr>\r\n        <td>Courses Interested</td>\r\n        <td>\r\n            <input type=\"checkbox\" name=\"course\" value=\"DBMS\"> DBMS\r\n            <input type=\"checkbox\" name=\"course\" value=\"DSA\"> DSA\r\n            <input type=\"checkbox\" name=\"course\" value=\"OS\"> OS\r\n            <input type=\"checkbox\" name=\"course\" value=\"FullStack\"> Full Stack\r\n        </td>\r\n    </tr>\r\n <tr>\r\n        <td>Branch</td>\r\n        <td>\r\n            <select name=\"branch\">\r\n                <option>CSE</option>\r\n                <option>ECE</option>\r\n                <option>EEE</option>\r\n                <option>MECH</option>\r\n                <option>CSM</option>\r\n            </select>\r\n        </td>\r\n    </tr>\r\n<tr>\r\n        <td>Date of Birth</td>\r\n        <td><input type=\"date\" name=\"dob\"></td>\r\n    </tr>\r\n    <tr>\r\n        <td>Upload Photo</td>\r\n        <td><input type=\"file\" name=\"photo\"></td>\r\n    </tr>\r\n<td>Skills You Have</td>\r\n        <td>\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"JAVA\"> DBMS\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"DSA\"> DSA\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"PYTHON\"> OS\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"FullStack\"> Full Stack\r\n        </td>\r\n    </tr>\r\n<tr>\r\n        <td colspan=\"2\" align=\"center\">\r\n            <input type=\"submit\" value=\"submit\">\r\n        </td>\r\n    </tr>\r\n</table>\r\n</div>\r\n<div id=\"main2\" align=\"center\">\r\n<table border=\"1\">\r\n<tr>\r\n<td>UserName</td>\r\n<td><input type=\"text\" placeholder=\"username\" name=\"username\" autofocus></td>\r\n</tr>\r\n<tr>\r\n<td>Password</td>\r\n<td><input type=\"password\" placeholder=\"password\" name=\"password\"></td>\r\n</tr>\r\n<tr>\r\n<td>Email</td>\r\n<td><input type=\"email\" placeholder=\"email\" name=\"email\"></td>\r\n</tr>\r\n<tr>\r\n<td>Address</td>\r\n<td><textarea name=\"address\" placeholder=\"address\"></textarea></td>\r\n</tr>\r\n<tr>\r\n<td>Gender</td>\r\n<td>\r\n<input type=\"radio\" name=\"gender\" val=\"male\">Male\r\n<input type=\"radio\" name=\"gender\" val=\"Female\">Female\r\n</td>\r\n <tr>\r\n        <td>Courses Interested</td>\r\n        <td>\r\n            <input type=\"checkbox\" name=\"course\" value=\"DBMS\"> DBMS\r\n            <input type=\"checkbox\" name=\"course\" value=\"DSA\"> DSA\r\n            <input type=\"checkbox\" name=\"course\" value=\"OS\"> OS\r\n            <input type=\"checkbox\" name=\"course\" value=\"FullStack\"> Full Stack\r\n        </td>\r\n    </tr>\r\n <tr>\r\n        <td>Branch</td>\r\n        <td>\r\n            <select name=\"branch\">\r\n                <option>CSE</option>\r\n                <option>ECE</option>\r\n                <option>EEE</option>\r\n                <option>MECH</option>\r\n                <option>CSM</option>\r\n            </select>\r\n        </td>\r\n    </tr>\r\n<tr>\r\n        <td>Date of Birth</td>\r\n        <td><input type=\"date\" name=\"dob\"></td>\r\n    </tr>\r\n    <tr>\r\n        <td>Upload Photo</td>\r\n        <td><input type=\"file\" name=\"photo\"></td>\r\n    </tr>\r\n<td>Skills You Have</td>\r\n        <td>\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"JAVA\"> DBMS\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"DSA\"> DSA\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"PYTHON\"> OS\r\n            <input type=\"checkbox\" name=\"Skills\" value=\"FullStack\"> Full Stack\r\n        </td>\r\n    </tr>\r\n<tr>\r\n        <td colspan=\"2\" align=\"center\">\r\n            <input type=\"submit\" value=\"submit\">\r\n        </td>\r\n    </tr>\r\n</table>\r\n</div>\r\n\t</div>\r\n</div>\r\n<div id=\"footer\" align=\"center\">footer</div>  \r\n\r\n<!-- <h1>CSS TRANSITION EXAMPLE</h1>\r\n<div></div>\r\n<p>place the cursor at the box</p>-->\r\n</body>\r\n</html>"
+    day: 2,
+    title: 'Forms and CSS Transitions',
+    tags: ['html', 'css'],
+    content: `
+      <h3>HTML Forms and CSS Basics</h3>
+      <p>Forms are used to collect user input. CSS is used to style and animate HTML elements.</p>
+      <br/>
+      <h4>Forms Elements:</h4>
+      <ul>
+        <li><strong>&lt;form&gt;</strong>: Container for form elements.</li>
+        <li><strong>&lt;input&gt;</strong>: The most common form element. Can be text, password, email, radio, checkbox, etc.</li>
+        <li><strong>&lt;textarea&gt;</strong>: A multi-line input field.</li>
+        <li><strong>&lt;button&gt;</strong>: A clickable button.</li>
+      </ul>
+      <br/>
+      <h4>CSS Transitions:</h4>
+      <p>CSS transitions allow you to change property values smoothly (from one value to another), over a given duration. For example, changing a background color when a user hovers over an element.</p>
+    `
   },
   {
-    "day": 3,
-    "title": "Tables and Layouts",
-    "tags": [
-      "html",
-      "css"
-    ],
-    "file": "Apr_18_1.html",
-    "content": "<!--<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <style>\r\n        /* This selects <h1> elements that are DIRECT children of <ul> */\r\n        ul > h1 \r\n        {\r\n            color: red;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n\r\n    <h1>CHILD SELECTOR EXAMPLE</h1>\r\n    \r\n    <ul>\r\n\t<ul>\r\n        <h1>subjects</h1> <!-- This will be RED because it's a direct child -->\r\n\t</ul>\r\n        <li>Maths</li>\r\n        <li><ul><ul><h1>English</h1></ul></ul></li> <!-- This will NOT be red (it's a grandchild) -->\r\n        <li>Computers</li>\r\n    </ul>-->\r\n\r\n\r\n<html>\r\n<head>\r\n<title>CSS Table Example</title>\r\n\r\n<style>\r\ntable{\r\nborder-collapse:collapse;\r\nwidth:50%;\r\n}\r\n\r\nth{\r\nbackground-color:blue;\r\ncolor:yellow;\r\nborder:1px solid black;\r\n}\r\n\r\ntd{\r\nbackground-color:yellow;\r\ncolor:blue;\r\nborder:1px solid black;\r\n}\r\n\r\ninput{\r\nbackground-color:yellow;\r\nborder:0px solid black;\r\n}\r\n\r\n</style>\r\n\r\n</head>\r\n<body>\r\n\r\n<h1>CSS Table Example</h1>\r\n\r\n<table>\r\n\r\n<caption>FIRST TABLE</caption>\r\n\r\n<tr>\r\n<th>SNO</th>\r\n<th>NAME</th>\r\n<th>AGE</th>\r\n</tr>\r\n\r\n<tr>\r\n<td>1</td>\r\n<td><input type=\"string\"></td>\r\n<td>25</td>\r\n</tr>\r\n\r\n<tr>\r\n<td>2</td>\r\n<td><input type=\"string\" style=\"background-color: yellow;border:0px;\"; ></td>\r\n<td>35</td>\r\n</tr>\r\n\r\n<tr>\r\n<td>3</td>\r\n<td><input type=\"string\"></td>\r\n<td>5</td>\r\n</tr>\r\n\r\n</table>\r\n\r\n</body>\r\n</html>"
+    day: 3,
+    title: 'Tables and Layouts',
+    tags: ['html', 'css'],
+    content: `
+      <h3>HTML Tables</h3>
+      <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+      <br/>
+      <h4>Table Structure:</h4>
+      <ul>
+        <li><strong>&lt;table&gt;</strong>: Defines the table.</li>
+        <li><strong>&lt;tr&gt;</strong>: Defines a row in a table.</li>
+        <li><strong>&lt;th&gt;</strong>: Defines a header cell in a table.</li>
+        <li><strong>&lt;td&gt;</strong>: Defines a standard cell in a table.</li>
+      </ul>
+      <p>You can use the <code>colspan</code> and <code>rowspan</code> attributes to make a cell span multiple columns or rows respectively.</p>
+    `
   },
   {
-    "day": 4,
-    "title": "JS Introduction",
-    "tags": [
-      "html",
-      "js"
-    ],
-    "file": "Apr_20_1.html",
-    "content": "<!DOCTYPE html>\r\n<html>\r\n<body>\r\n\r\n<input type=\"text\" id=\"ip\" placeholder=\"Enter number\">\r\n<button onclick=\"test()\">Test</button>\r\n\r\n<div id=\"op\"></div>\r\n\r\n<script>\r\nfunction test()\r\n{\r\nvar n = document.getElementById(\"ip\").value;\r\n\r\nvar tstart = \"<table border='1'><thead><tr><th>S.No</th></tr></thead><tbody>\";\r\n\r\nvar rows = \"\";\r\n\r\nfor(let i=1; i<=n; i++)\r\n{\r\nrows += \"<tr><td>\"+i+\"</td></tr>\";\r\n}\r\n\r\nvar tend = \"</tbody></table>\";\r\n\r\ndocument.getElementById(\"op\").innerHTML = tstart + rows + tend;\r\n}\r\n</script>\r\n\r\n</body>\r\n</html>"
+    day: 4,
+    title: 'JS Introduction',
+    tags: ['html', 'js'],
+    content: `
+      <h3>Introduction to JavaScript</h3>
+      <p>JavaScript is the programming language of the Web. It is used to make web pages interactive.</p>
+      <br/>
+      <h4>Basic Concepts:</h4>
+      <ul>
+        <li><strong>Variables:</strong> Containers for storing data values. In modern JS, we use <code>let</code> and <code>const</code>.</li>
+        <li><strong>Functions:</strong> Blocks of code designed to perform a particular task. They are executed when "something" invokes them.</li>
+        <li><strong>Events:</strong> "Things" that happen to HTML elements (e.g., a user clicks a button). JS can react to these events.</li>
+      </ul>
+    `
   },
   {
-    "day": 5,
-    "title": "JS DOM Manipulation",
-    "tags": [
-      "html",
-      "js"
-    ],
-    "file": "Apr_21_Home_Work.html",
-    "content": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Color Selection</title>\r\n</head>\r\n<body>\r\n\r\n<h2>Select a Color</h2>\r\n\r\n<select id=\"color\">\r\n    <option value=\"\">--Select--</option>\r\n    <option value=\"Red\">Red</option>\r\n    <option value=\"Blue\">Blue</option>\r\n    <option value=\"Green\">Green</option>\r\n    <option value=\"Yellow\">Yellow</option>\r\n    <option value=\"Pink\">Pink</option>\r\n</select>\r\n\r\n<br><br>\r\n\r\n<button onclick=\"openNewPage()\">Next</button>\r\n\r\n<script>\r\nfunction openNewPage() {\r\n    let color = document.getElementById(\"color\").value;\r\n\r\n    if (color === \"\") {\r\n        alert(\"Please select a color\");\r\n        return;\r\n    }\r\n\r\n    // open new page\r\n    let newPage = window.open(\"\", \"_blank\");\r\n\r\n    // write content into new page\r\n    newPage.document.write(`\r\n        <html>\r\n        <head>\r\n            <title>Selected Color</title>\r\n        </head>\r\n        <body style=\"text-align:center; font-family:Arial;\">\r\n            <h2>Selected Color</h2>\r\n            <div style=\"\r\n                width:150px;\r\n                height:150px;\r\n                margin:20px auto;\r\n                background:${color};\r\n                border:2px solid black;\">\r\n            </div>\r\n            <h1>${color}</h1>\r\n        </body>\r\n        </html>\r\n    `);\r\n}\r\n</script>\r\n\r\n</body>\r\n</html>"
+    day: 5,
+    title: 'JS DOM Manipulation',
+    tags: ['html', 'js'],
+    content: `
+      <h3>The HTML DOM</h3>
+      <p>The Document Object Model (DOM) is a programming interface for HTML documents. It represents the page so that programs can change the document structure, style, and content.</p>
+      <br/>
+      <h4>Accessing Elements:</h4>
+      <p>You can access HTML elements using methods like:</p>
+      <ul>
+        <li><code>document.getElementById(id)</code></li>
+        <li><code>document.querySelector(selector)</code></li>
+      </ul>
+      <br/>
+      <h4>Changing Content:</h4>
+      <p>To change the content of an HTML element, you can use the <code>innerHTML</code> or <code>innerText</code> properties.</p>
+    `
   },
   {
-    "day": 6,
-    "title": "Logic and Operations",
-    "tags": [
-      "html",
-      "js"
-    ],
-    "file": "Apr_22.html",
-    "content": "<!doctype html>\r\n<html>\r\n<head>\r\n    <title>Accessing The Elements</title>\r\n</head>\r\n<body>\r\n\r\n<h2>Accessing Elements</h2>\r\n\r\n<div>\r\n    <input type=\"text\" id=\"myTitle1\" placeholder=\"My Title\">\r\n    <input type=\"text\" class=\"item\" placeholder=\"Item 1\">\r\n    <input type=\"text\" class=\"item\" placeholder=\"Item 2\">\r\n    <p>Paragraph 1</p>\r\n    <p>Paragraph 2</p>\r\n\r\n    <input type=\"button\" value=\"Access Elements\" onclick=\"start()\">\r\n</div>\r\n\r\n<div id=\"op\" style=\"margin-top:20px; border:1px solid black; padding:10px;\"></div>\r\n\r\n<h2>Changing Content</h2>\r\n\r\n<div>\r\n    <input type=\"button\" value=\"Use innerHTML\" onclick=\"useInnerHTML()\">\r\n    <input type=\"button\" value=\"Use innerText\" onclick=\"useInnerText()\">\r\n    <input type=\"button\" value=\"Use textContent\" onclick=\"useTextContent()\">\r\n    <input type=\"button\" value=\"Use Write\" onclick=\"useWrite()\">\r\n    <input type=\"button\" value=\"Use Print\" onclick=\"printPage()\">\r\n</div>\r\n\r\n<script>\r\n// Accessing elements\r\nfunction start() {\r\n\r\n    let title = document.getElementById(\"myTitle1\");\r\n    console.log(\"Title:\", title.value);\r\n\r\n    let items = document.getElementsByClassName(\"item\");\r\n    console.log(\"Items:\");\r\n    for (let i = 0; i < items.length; i++) {\r\n        console.log(items[i].value);\r\n    }\r\n\r\n    let paragraphs = document.getElementsByTagName(\"p\");\r\n    console.log(\"Paragraphs:\");\r\n    for (let i = 0; i < paragraphs.length; i++) {\r\n        console.log(paragraphs[i].innerText);\r\n    }\r\n\r\n    let firstItem = document.querySelector(\".item\");\r\n    console.log(\"First item using querySelector:\", firstItem.value);\r\n\r\n}\r\n\r\n// Changing content\r\nfunction useInnerHTML() {\r\n    document.getElementById(\"op\").innerHTML = \"<b>Bold Text using innerHTML</b>\";\r\n}\r\n\r\nfunction useInnerText() {\r\n    document.getElementById(\"op\").innerText = \"<b>Bold Text using innerText</b>\";\r\n}\r\n\r\nfunction useTextContent() {\r\n    document.getElementById(\"op\").textContent = \"<b>Bold Text using textContent</b>\";\r\n}\r\nfunction useWrite() {\r\n    document.write(\"Hello World !...\");\r\n}\r\nfunction printPage(){\r\n    window.print(\"Hello World !...\");\r\n}\r\n</script>\r\n\r\n</body>\r\n</html>"
+    day: 6,
+    title: 'Logic and Operations',
+    tags: ['html', 'js'],
+    content: `
+      <h3>JavaScript Logic</h3>
+      <p>Control structures allow you to dictate the flow of your program.</p>
+      <br/>
+      <h4>Loops:</h4>
+      <p>Loops are handy if you want to run the same code over and over again, each time with a different value.</p>
+      <ul>
+        <li><strong>For Loop:</strong> Loops through a block of code a number of times.</li>
+        <li><strong>While Loop:</strong> Loops through a block of code while a specified condition is true.</li>
+      </ul>
+      <br/>
+      <h4>Dynamic HTML Generation:</h4>
+      <p>Using loops and variables, you can dynamically build strings containing HTML and insert them into the DOM, like building a table dynamically based on user input.</p>
+    `
   },
   {
-    "day": 7,
-    "title": "Advanced Forms",
-    "tags": [
-      "html",
-      "css",
-      "js"
-    ],
-    "file": "Apr_23_3.html",
-    "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>JSON Form Capture</title>\r\n    <style>\r\n        body {\r\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\r\n            background-color: #f4f7f6;\r\n            display: flex;\r\n            justify-content: space-around;\r\n            padding: 40px;\r\n            flex-wrap: wrap;\r\n        }\r\n        .container {\r\n            background: white;\r\n            padding: 2rem;\r\n            border-radius: 8px;\r\n            box-shadow: 0 4px 6px rgba(0,0,0,0.1);\r\n            width: 400px;\r\n        }\r\n        .output-container {\r\n            width: 450px;\r\n            background: #2d2d2d;\r\n            color: #61dafb;\r\n            padding: 1rem;\r\n            border-radius: 8px;\r\n            height: fit-content;\r\n            min-height: 300px;\r\n        }\r\n        .form-group {\r\n            margin-bottom: 15px;\r\n        }\r\n        label {\r\n            display: block;\r\n            margin-bottom: 5px;\r\n            font-weight: bold;\r\n        }\r\n        input, select {\r\n            width: 100%;\r\n            padding: 8px;\r\n            border: 1px solid #ddd;\r\n            border-radius: 4px;\r\n            box-sizing: border-box;\r\n        }\r\n        .checkbox-group {\r\n            display: grid;\r\n            grid-template-columns: 1fr 1fr;\r\n            gap: 10px;\r\n            background: #f9f9f9;\r\n            padding: 10px;\r\n            border-radius: 4px;\r\n        }\r\n        .checkbox-item {\r\n            display: flex;\r\n            align-items: center;\r\n        }\r\n        .checkbox-item input {\r\n            width: auto;\r\n            margin-right: 8px;\r\n        }\r\n        button {\r\n            width: 100%;\r\n            padding: 10px;\r\n            background-color: #007bff;\r\n            color: white;\r\n            border: none;\r\n            border-radius: 4px;\r\n            cursor: pointer;\r\n            font-size: 16px;\r\n            margin-top: 10px;\r\n        }\r\n        button:hover {\r\n            background-color: #0056b3;\r\n        }\r\n        pre {\r\n            white-space: pre-wrap;\r\n            word-wrap: break-word;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n\r\n<div class=\"container\">\r\n    <h2 style=\"margin-top:0\">User Details</h2>\r\n    <form id=\"dataForm\">\r\n        <div class=\"form-group\">\r\n            <label>Full Name</label>\r\n            <input type=\"text\" id=\"name\" required>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label>Date of Birth</label>\r\n            <input type=\"date\" id=\"dob\" required>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label>Branch</label>\r\n            <input type=\"text\" id=\"branch\" placeholder=\"e.g. CSE\" required>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label>Technical Skills</label>\r\n            <div class=\"checkbox-group\">\r\n                <div class=\"checkbox-item\"><input type=\"checkbox\" name=\"skills\" value=\"C\"> C</div>\r\n                <div class=\"checkbox-item\"><input type=\"checkbox\" name=\"skills\" value=\"C++\"> C++</div>\r\n                <div class=\"checkbox-item\"><input type=\"checkbox\" name=\"skills\" value=\"Java\"> Java</div>\r\n                <div class=\"checkbox-item\"><input type=\"checkbox\" name=\"skills\" value=\"Python\"> Python</div>\r\n                <div class=\"checkbox-item\"><input type=\"checkbox\" name=\"skills\" value=\"DBMS\"> DBMS</div>\r\n                <div class=\"checkbox-item\"><input type=\"checkbox\" name=\"skills\" value=\"OS\"> OS</div>\r\n            </div>\r\n        </div>\r\n        <button type=\"submit\">Submit & Generate JSON</button>\r\n    </form>\r\n</div>\r\n\r\n<div class=\"output-container\">\r\n    <h3 style=\"color: white; margin-top:0\">JSON Output</h3>\r\n    <pre id=\"jsonDisplay\">// Submit the form to see JSON here...</pre>\r\n</div>\r\n\r\n<script>\r\n    var form = document.getElementById('dataForm');\r\n    var display = document.getElementById('jsonDisplay');\r\n\r\n    form.addEventListener('submit', function(e) {\r\n        e.preventDefault();\r\n\r\n        // Collecting checkbox values\r\n        var selectedSkills = [];\r\n        var checkboxes = document.querySelectorAll('input[name=\"skills\"]:checked');\r\n        checkboxes.forEach(function(checkbox) {\r\n            selectedSkills.push(checkbox.value);\r\n        });\r\n\r\n        // Constructing the object\r\n        var formData = {\r\n            name: document.getElementById('name').value,\r\n            dob: document.getElementById('dob').value,\r\n            branch: document.getElementById('branch').value,\r\n            skills: selectedSkills,\r\n            timestamp: new Date().toISOString()\r\n        };\r\n\r\n        // Displaying as JSON string\r\n        display.textContent = JSON.stringify(formData, null, 4);\r\n    });\r\n</script>\r\n\r\n</body>\r\n</html>"
+    day: 7,
+    title: 'Advanced Forms',
+    tags: ['html', 'css', 'js'],
+    content: `
+      <h3>Advanced Form Handling with JS</h3>
+      <p>JavaScript can be used to validate form input and to handle complex data extraction from forms.</p>
+      <br/>
+      <h4>Key Concepts:</h4>
+      <ul>
+        <li><strong>Event Listeners:</strong> Using <code>addEventListener('submit', callback)</code> to intercept form submissions.</li>
+        <li><strong>Prevent Default:</strong> Calling <code>event.preventDefault()</code> to stop the browser from reloading the page when a form is submitted.</li>
+        <li><strong>JSON:</strong> JavaScript Object Notation is a lightweight format for storing and transporting data. Form data can be gathered, formatted into a JS object, and then converted to a JSON string.</li>
+      </ul>
+    `
   },
   {
-    "day": 8,
-    "title": "Profile Portfolio Building",
-    "tags": [
-      "html",
-      "css",
-      "js"
-    ],
-    "file": "Apr_24_Profile.html",
-    "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n<title>Jaswanth Portfolio</title>\r\n\r\n<!-- Bootstrap -->\r\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n\r\n<style>\r\n\r\n/* ===== GLOBAL ===== */\r\nbody {\r\n    font-family: 'Segoe UI', sans-serif;\r\n    background: #f8f9fa;\r\n    scroll-behavior: smooth;\r\n}\r\n\r\nh2 {\r\n    font-weight: 700;\r\n    margin-bottom: 20px;\r\n}\r\n\r\nsection {\r\n    padding: 80px 0;\r\n}\r\n\r\n/* ===== NAVBAR ===== */\r\n.navbar {\r\n    background: #111827;\r\n}\r\n.navbar-brand {\r\n    font-weight: bold;\r\n    color: #fff !important;\r\n}\r\n.nav-link {\r\n    color: #d1d5db !important;\r\n    margin-left: 15px;\r\n}\r\n.nav-link:hover {\r\n    color: #fff !important;\r\n}\r\n\r\n/* ===== HERO ===== */\r\n.hero {\r\n    height: 100vh;\r\n    background: linear-gradient(135deg, #111827, #2563eb);\r\n    color: white;\r\n    display: flex;\r\n    align-items: center;\r\n    text-align: center;\r\n}\r\n\r\n.hero h1 {\r\n    font-size: 3rem;\r\n    font-weight: bold;\r\n}\r\n\r\n.hero p {\r\n    font-size: 1.2rem;\r\n    color: #e5e7eb;\r\n}\r\n\r\n.btn-custom {\r\n    background: #2563eb;\r\n    color: white;\r\n    border-radius: 25px;\r\n    padding: 10px 25px;\r\n}\r\n.btn-custom:hover {\r\n    background: #1e40af;\r\n}\r\n\r\n/* ===== ABOUT ===== */\r\n.about p {\r\n    max-width: 700px;\r\n    margin: auto;\r\n    color: #4b5563;\r\n}\r\n\r\n/* ===== SKILLS ===== */\r\n.skill-box {\r\n    background: white;\r\n    padding: 20px;\r\n    border-radius: 10px;\r\n    transition: 0.3s;\r\n    box-shadow: 0 4px 10px rgba(0,0,0,0.05);\r\n}\r\n.skill-box:hover {\r\n    transform: translateY(-8px);\r\n}\r\n\r\n/* ===== PROJECTS ===== */\r\n.project-card {\r\n    border: none;\r\n    border-radius: 15px;\r\n    overflow: hidden;\r\n    transition: 0.3s;\r\n    box-shadow: 0 6px 15px rgba(0,0,0,0.1);\r\n}\r\n.project-card:hover {\r\n    transform: translateY(-10px);\r\n}\r\n\r\n.project-card .card-body {\r\n    padding: 20px;\r\n}\r\n\r\n/* ===== CONTACT ===== */\r\n.contact-form {\r\n    max-width: 600px;\r\n    margin: auto;\r\n}\r\n\r\n.form-control {\r\n    border-radius: 10px;\r\n}\r\n\r\n.form-control:focus {\r\n    box-shadow: none;\r\n    border-color: #2563eb;\r\n}\r\n\r\n/* ===== FOOTER ===== */\r\nfooter {\r\n    background: #111827;\r\n    color: #d1d5db;\r\n    padding: 20px;\r\n    text-align: center;\r\n}\r\n\r\n</style>\r\n</head>\r\n\r\n<body>\r\n\r\n<!-- NAVBAR -->\r\n<nav class=\"navbar navbar-expand-lg fixed-top\">\r\n<div class=\"container\">\r\n    <a class=\"navbar-brand\" href=\"#\">Jaswanth</a>\r\n    <button class=\"navbar-toggler bg-light\" data-bs-toggle=\"collapse\" data-bs-target=\"#menu\">☰</button>\r\n    <div class=\"collapse navbar-collapse\" id=\"menu\">\r\n        <ul class=\"navbar-nav ms-auto\">\r\n            <li><a class=\"nav-link\" href=\"#home\">Home</a></li>\r\n            <li><a class=\"nav-link\" href=\"#about\">About</a></li>\r\n            <li><a class=\"nav-link\" href=\"#skills\">Skills</a></li>\r\n            <li><a class=\"nav-link\" href=\"#projects\">Projects</a></li>\r\n            <li><a class=\"nav-link\" href=\"#contact\">Contact</a></li>\r\n        </ul>\r\n    </div>\r\n</div>\r\n</nav>\r\n\r\n<!-- HERO -->\r\n<section id=\"home\" class=\"hero\">\r\n<div class=\"container\">\r\n    <h1 id=\"typing\"></h1>\r\n    <p>AI Enthusiast • Web Developer • Problem Solver</p>\r\n    <a href=\"#contact\" class=\"btn btn-custom mt-3\">Contact Me</a>\r\n</div>\r\n</section>\r\n\r\n<!-- ABOUT -->\r\n<section id=\"about\" class=\"about text-center\">\r\n<div class=\"container\">\r\n    <h2>About Me</h2>\r\n    <p>\r\n        I'm Jaswanth, a developer passionate about Artificial Intelligence, Machine Learning,\r\n        and building real-world applications. I enjoy solving problems and creating modern\r\n        web and mobile experiences.\r\n    </p>\r\n</div>\r\n</section>\r\n\r\n<!-- SKILLS -->\r\n<section id=\"skills\" class=\"bg-light\">\r\n<div class=\"container text-center\">\r\n    <h2>Skills</h2>\r\n    <div class=\"row g-4 mt-3\">\r\n        <div class=\"col-md-3\"><div class=\"skill-box\">HTML</div></div>\r\n        <div class=\"col-md-3\"><div class=\"skill-box\">CSS</div></div>\r\n        <div class=\"col-md-3\"><div class=\"skill-box\">JavaScript</div></div>\r\n        <div class=\"col-md-3\"><div class=\"skill-box\">Python</div></div>\r\n    </div>\r\n</div>\r\n</section>\r\n\r\n<!-- PROJECTS -->\r\n<section id=\"projects\">\r\n<div class=\"container\">\r\n    <h2 class=\"text-center\">Projects</h2>\r\n    <div class=\"row g-4 mt-3\">\r\n\r\n        <div class=\"col-md-4\">\r\n            <div class=\"card project-card\">\r\n                <div class=\"card-body\">\r\n                    <h5>AI Disaster System</h5>\r\n                    <p>Predictive system for disaster management using ML.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"col-md-4\">\r\n            <div class=\"card project-card\">\r\n                <div class=\"card-body\">\r\n                    <h5>AnyTrade App</h5>\r\n                    <p>Android app with education & entertainment features.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"col-md-4\">\r\n            <div class=\"card project-card\">\r\n                <div class=\"card-body\">\r\n                    <h5>GNSS Classification</h5>\r\n                    <p>Signal classification using machine learning.</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n</section>\r\n\r\n<!-- CONTACT -->\r\n<section id=\"contact\" class=\"bg-light\">\r\n<div class=\"container text-center\">\r\n    <h2>Contact</h2>\r\n    <form class=\"contact-form\" onsubmit=\"return sendMsg()\">\r\n        <input type=\"text\" class=\"form-control mb-3\" placeholder=\"Your Name\" required>\r\n        <input type=\"email\" class=\"form-control mb-3\" placeholder=\"Your Email\" required>\r\n        <textarea class=\"form-control mb-3\" placeholder=\"Your Message\"></textarea>\r\n        <button class=\"btn btn-custom\">Send Message</button>\r\n    </form>\r\n    <p id=\"msg\" class=\"mt-3 text-success\"></p>\r\n</div>\r\n</section>\r\n\r\n<!-- FOOTER -->\r\n<footer>\r\n    <p>© 2026 Jaswanth | Portfolio</p>\r\n</footer>\r\n\r\n<!-- JS -->\r\n<script>\r\nconst text = \"Hi, I'm Jaswanth \";\r\nlet index = 0;\r\n\r\nfunction typeEffect() {\r\n    if(index < text.length){\r\n        document.getElementById(\"typing\").innerHTML += text.charAt(index);\r\n        index++;\r\n        setTimeout(typeEffect, 80);\r\n    }\r\n}\r\ntypeEffect();\r\n\r\nfunction sendMsg(){\r\n    document.getElementById(\"msg\").innerText = \"Message Sent Successfully!\";\r\n    return false;\r\n}\r\n</script>\r\n\r\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>\r\n\r\n</body>\r\n</html>"
+    day: 8,
+    title: 'Profile Portfolio Building',
+    tags: ['html', 'css', 'js'],
+    content: `
+      <h3>Building a Complete Portfolio</h3>
+      <p>Combining HTML structure, CSS styling, and JavaScript logic to create a cohesive, interactive web application.</p>
+      <br/>
+      <h4>Core Components:</h4>
+      <ul>
+        <li><strong>Hero Section:</strong> The topmost section of a website designed to grab attention immediately.</li>
+        <li><strong>Navigation:</strong> Sticky or fixed navigation bars help users move through a single-page application easily.</li>
+        <li><strong>Responsive Design:</strong> Ensuring the layout looks good on desktops, tablets, and mobile devices using CSS Media Queries or frameworks like Bootstrap.</li>
+        <li><strong>Typing Effects:</strong> Using JS <code>setTimeout()</code> to create dynamic text animations.</li>
+      </ul>
+    `
   },
   {
-    "day": 9,
-    "title": "Mean & Median Calculator",
-    "tags": [
-      "html",
-      "css",
-      "js"
-    ],
-    "file": "Apr_23_Mean_Median_calculator.html",
-    "content": "<!DOCTYPE html>\r\n<html>\r\n<body>\r\n\r\n<h2>Mean and Median</h2>\r\n<div>\r\n<input id=\"ip\" type=\"integer\" \r\n<button onclick=\"calculate()\">Start Now</button>\r\n</div> <div id=\"op></div>\r\n\r\n\r\n<script>\r\nfunction calculate() {\r\n\r\n    let arr = document.getElementById(;\r\n      let arr = input.split(\",\").map(Number);\r\n    let sum = arr.reduce((a, b) => a + b, 0);\r\n    let mean = sum / arr.length;\r\n\r\n    let sorted = arr.sort((a, b) => a - b);\r\n    let mid = Math.floor(sorted.length / 2);\r\n    let median = sorted[mid];\r\n\r\n    document.getElementById(\"output\").innerHTML =\r\n        \"Mean: \" + mean + \"<br>Median: \" + median;\r\n}\r\n</script>\r\n\r\n</body>\r\n</html>"
+    day: 9,
+    title: 'Mean & Median Calculator',
+    tags: ['html', 'css', 'js'],
+    content: `
+      <h3>Mathematical Operations in JS</h3>
+      <p>JavaScript provides the <code>Math</code> object for mathematical tasks, and arrays can be manipulated to compute statistics.</p>
+      <br/>
+      <h4>Mean (Average):</h4>
+      <p>Calculated by summing all numbers in an array and dividing by the array's length.</p>
+      <br/>
+      <h4>Median:</h4>
+      <p>The middle value of a sorted array. If the array has an even number of elements, the median is the average of the two middle elements. Requires using the array <code>sort()</code> method properly.</p>
+    `
   },
   {
-    "day": 10,
-    "title": "JavaScript Calculator",
-    "tags": [
-      "html",
-      "css",
-      "js"
-    ],
-    "file": "Calculator.html",
-    "content": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<title>Calculator</title>\r\n\r\n<link rel=\"stylesheet\" href=\"styles.css\">\r\n\r\n</head>\r\n<body>\r\n\r\n<div id=\"dis\">\r\n\r\n<input type=\"text\" id=\"screen\" readonly>\r\n\r\n</div>\r\n\r\n<div id=\"btn\">\r\n\r\n<button onclick=\"addToDisplay('7')\">7</button>\r\n<button onclick=\"addToDisplay('8')\">8</button>\r\n<button onclick=\"addToDisplay('9')\">9</button>\r\n<button onclick=\"addToDisplay('/')\">/</button>\r\n<button onclick=\"addToDisplay('4')\">4</button>\r\n<button onclick=\"addToDisplay('5')\">5</button>\r\n<button onclick=\"addToDisplay('6')\">6</button>\r\n<button onclick=\"addToDisplay('*')\">*</button>\r\n<button onclick=\"addToDisplay('1')\">1</button>\r\n<button onclick=\"addToDisplay('2')\">2</button>\r\n<button onclick=\"addToDisplay('3')\">3</button>\r\n<button onclick=\"addToDisplay('-')\">-</button>\r\n<button onclick=\"addToDisplay('0')\">0</button>\r\n<button onclick=\"addToDisplay('.')\">.</button>\r\n<button onclick=\"calculate()\">=</button>\r\n<button onclick=\"addToDisplay('+')\">+</button>\r\n<button onclick=\"clearScreen()\">C</button>\r\n</div>\r\n<script>\r\nfunction addToDisplay(value)\r\n{\r\ndocument.getElementById(\"screen\").value += value;\r\n}\r\nfunction calculate()\r\n{\r\ndocument.getElementById(\"screen\").value =\r\neval(document.getElementById(\"screen\").value);\r\n}\r\n\r\nfunction clearScreen()\r\n{\r\ndocument.getElementById(\"screen\").value = \"\";\r\n}\r\n\r\n</script>\r\n\r\n</body>\r\n</html>"
+    day: 10,
+    title: 'JavaScript Calculator',
+    tags: ['html', 'css', 'js'],
+    content: `
+      <h3>Building a functional Calculator</h3>
+      <p>A calculator application tests your ability to handle multiple events and maintain state.</p>
+      <br/>
+      <h4>Key Mechanisms:</h4>
+      <ul>
+        <li><strong>State Management:</strong> Keeping track of the current input string or numbers being operated on.</li>
+        <li><strong>Evaluation:</strong> Computing the result of a mathematical string. (Note: Using <code>eval()</code> is common in simple tutorials but generally avoided in production due to security risks; parsing the string manually is the safer alternative).</li>
+        <li><strong>Grid Layouts:</strong> Using CSS Grid to perfectly align calculator buttons into rows and columns.</li>
+      </ul>
+    `
   }
 ];

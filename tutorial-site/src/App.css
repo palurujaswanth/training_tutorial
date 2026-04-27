@@ -33,6 +33,7 @@
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .nav-item::before {
@@ -209,6 +210,40 @@ pre {
   font-size: 0.9rem;
   line-height: 1.6;
   color: #e5e7eb;
+}
+
+/* Theory Container */
+.theory-container h3 {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.theory-container h4 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.theory-container ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.theory-container li {
+  margin-bottom: 0.5rem;
+}
+
+.theory-container code {
+  background-color: var(--bg-tertiary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+  color: var(--tag-js);
 }
 
 /* Netlify Guide */
