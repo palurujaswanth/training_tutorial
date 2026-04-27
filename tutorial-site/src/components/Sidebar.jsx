@@ -32,19 +32,7 @@ export function Sidebar() {
           </NavLink>
         ))}
         
-        <div style={{ margin: '1rem 0', height: '1px', background: 'var(--border-color)' }}></div>
-        
-        <NavLink 
-          to="/deploy"
-          className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-        >
-          <div className="nav-item-top">
-            <span className="nav-day" style={{ color: 'var(--accent-primary)' }}>Guide</span>
-          </div>
-          <div className="nav-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Rocket size={16} /> Deploy to Netlify
-          </div>
-        </NavLink>
+
       </div>
     </div>
   );
